@@ -18,3 +18,5 @@ $ npm install
 $ npm run build
 $ npm start
 ```
+
+More info [here](https://itnext.io/storing-json-in-postgres-using-node-js-c8ff50337013).
