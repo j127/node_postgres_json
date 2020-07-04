@@ -12,3 +12,9 @@ $ docker run --rm \
     -e POSTGRES_PASSWORD=password \
     --name postgres-tmp postgres
 ```
+
+```
+$ npm install
+$ npm run build
+$ npm start
+```

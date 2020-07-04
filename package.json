@@ -1,0 +1,27 @@
+{
+    "name": "@j127/node_postgres_json",
+    "version": "0.1.0",
+    "description": "An experiment with storing JSON in PostgreSQL.",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc --build",
+        "start": "node dist/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/j127/node_postgres_json.git"
+    },
+    "author": "J. Cohen <hostelmarketing@gmail.com> (https://github.com/j127)",
+    "license": "BSD-3-Clause",
+    "private": true,
+    "bugs": {
+        "url": "https://github.com/j127/node_postgres_json/issues"
+    },
+    "homepage": "https://github.com/j127/node_postgres_json#readme",
+    "dependencies": {
+        "@databases/pg": "^2.1.2",
+        "dotenv": "^8.2.0",
+        "typescript": "^3.9.6"
+    }
+}
