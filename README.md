@@ -61,20 +61,6 @@ postgres=# \l
 
 postgres=# \c messages_db
 You are now connected to database "messages_db" as user "postgres".
-messages_db=# \d
-               List of relations
- Schema |      Name       |   Type   |  Owner
---------+-----------------+----------+----------
- public | messages        | table    | postgres
- public | messages_id_seq | sequence | postgres
-(2 rows)
-
-messages_db=# \dt messages
-          List of relations
- Schema |   Name   | Type  |  Owner
---------+----------+-------+----------
- public | messages | table | postgres
-(1 row)
 
 messages_db=# select * from messages;
  id |                                   data
