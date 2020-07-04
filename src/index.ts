@@ -1,32 +1,15 @@
-import dotenv from "dotenv";
-// import connect, { sql } from "@databases/pg";
-import { createMessage } from "./generate-messages";
+import messages from "./messages";
+import { v4 as uuidv4 } from "uuid";
 
-dotenv.config();
+const ms = messages.createMessages(20);
 
-const msg = createMessage();
+ms.map(async msg => await messages.set(uuidv4(), msg));
 
-console.log(msg);
-
-
-// const db = connect();
-
-// export async function get(id: string) {
-//     const [row] = await db.query(
-//         sql`
-//             SELECT data
-//             FROM my_data
-//             WHERE id=${id}
-//         `
-//     );
-//     return row ? row.data : null;
+// async function getSomeData() {
+//     const items = await messages.getAll();
+//     console.log("items", items);
 // }
 
-// export async function set(id: string, value: object) {
-//     await db.query(sql`
-//         INSERT INTO messages (id, data)
-//         VALUES (${id}, ${value})
-//         ON CONFLICT id
-//         DO UPDATE SET data = EXCLUDED.data;
-//    `);
-// }
+// getSomeData();
+
+// messages.getAll().then(data => console.log(data));

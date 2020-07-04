@@ -16,6 +16,13 @@ function generateKebabString() {
 }
 
 /**
+ * Generate `quantity` messages.
+ */
+export function createMessages(quantity: number): object[] {
+    return _.times(quantity, createMessage);
+}
+
+/**
  * Generate a random message that can be stored in Postgres as JSONB.
  */
 export function createMessage(): object {

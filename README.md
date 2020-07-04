@@ -2,21 +2,24 @@
 
 An experiment with storing JSON in PostgreSQL.
 
-For local development:
+For local development start postgres in Docker:
 
 ```text
-$ docker run --rm \
-    -p 5432:5432 \
-    -v $HOME/docker/volumes/postgres:/var/run/postgresql \
-    -e POSTGRES_USER=username \
-    -e POSTGRES_PASSWORD=password \
-    --name postgres-tmp postgres
+$ docker-compose up
 ```
+
+Then, outside of Docker, on the host machine, run the code:
 
 ```
 $ npm install
 $ npm run build
 $ npm start
+```
+
+To shutdown postgres:
+
+```text
+$ docker-compose down
 ```
 
 More info [here](https://itnext.io/storing-json-in-postgres-using-node-js-c8ff50337013).
