@@ -20,13 +20,14 @@
     },
     "homepage": "https://github.com/j127/node_postgres_json#readme",
     "dependencies": {
-        "@databases/pg": "^2.1.2",
         "@types/faker": "^4.1.12",
         "@types/lodash": "^4.14.157",
+        "@types/pg": "^7.14.3",
         "@types/uuid": "^8.0.0",
         "dotenv": "^8.2.0",
         "faker": "^4.1.0",
         "lodash": "^4.17.15",
+        "pg": "^8.2.1",
         "typescript": "^3.9.6",
         "uuid": "^8.2.0"
     }

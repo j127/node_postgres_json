@@ -1,15 +1,18 @@
-import messages from "./messages";
-import { v4 as uuidv4 } from "uuid";
+import db from "./db";
 
-const ms = messages.createMessages(20);
+// See `init.sql` to see what the JSON data looks like.
+const sql = `
+    SELECT
+        data ->> 'name' AS name,
+        data -> 'equipment' AS equipment
+    FROM messages;
+`;
+const params: string[] = [];
 
-ms.map(async msg => await messages.set(uuidv4(), msg));
-
-// async function getSomeData() {
-//     const items = await messages.getAll();
-//     console.log("items", items);
-// }
-
-// getSomeData();
-
-// messages.getAll().then(data => console.log(data));
+db.query(sql, params, (err, res) => {
+    if (err) {
+        console.error("ERROR", err);
+    } else {
+        console.log("rows", res.rows);
+    }
+});
