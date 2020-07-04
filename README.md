@@ -21,5 +21,3 @@ To shutdown postgres:
 ```text
 $ docker-compose down
 ```
-
-More info [here](https://itnext.io/storing-json-in-postgres-using-node-js-c8ff50337013).
